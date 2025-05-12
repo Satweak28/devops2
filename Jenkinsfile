@@ -4,7 +4,8 @@ pipeline {
   stages {
     stage('Clone') {
       steps {
-        git 'https://github.com/your-username/your-flask-repo.git'
+        git branch:'main', url:'https://github.com/Satweak28/devops.git' , credentialsId: 'github-token'
+
       }
     }
     stage('Install Dependencies') {
